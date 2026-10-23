@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crear cuenta · TaskFlow</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body>
+  <main class="auth-wrap">
+    <div class="card auth-card shadow-lg border-0">
+      <div class="card-body p-4 p-md-5">
+        <h1 class="h4 mb-1">Crear cuenta</h1>
+        <p class="text-muted small mb-4">Las cuentas nuevas se crean con rol <strong>Miembro</strong>.</p>
+
+        <form id="registerForm" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="name" name="name" maxlength="100" autocomplete="name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" maxlength="150" autocomplete="email">
+          </div>
+          <div class="mb-2">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" maxlength="72" autocomplete="new-password">
+          </div>
+          <ul id="pwRules" class="pw-rules list-unstyled mb-3"></ul>
+          <div class="mb-3">
+            <label for="password2" class="form-label">Confirmar contraseña</label>
+            <input type="password" class="form-control" id="password2" name="password2" maxlength="72" autocomplete="new-password">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Registrarme</button>
+        </form>
+
+        <p class="text-center small mt-3 mb-0">¿Ya tienes cuenta? <a href="/">Inicia sesión</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/api.js"></script>
+  <script src="/assets/js/auth.js"></script>
+  <script>$(initRegister);</script>
+</body>
+</html>
